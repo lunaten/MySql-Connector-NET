@@ -13,17 +13,22 @@ namespace _20180407_DataSet
 {
     public partial class _Default : Page
     {
+        /// <summary>
+        /// ページの初期ロード
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //ラベル
             DataTable dt = UseDataAdapterOpen();
-            lbl1.Text = dt.Rows.Count.ToString() + "ですーーー。";
-
-            //int count = UseMysqlScript();
-            //lbl2.Text = count.ToString() + "ですーーー。";
-
+            lbl1.Text = dt.Rows.Count.ToString();
         }
 
+        /// <summary>
+        /// userテーブルの件数を返す
+        /// </summary>
+        /// <returns></returns>
         public DataTable UseDataAdapterOpen()
         {
             MySqlConnection conn = null;
@@ -68,6 +73,23 @@ namespace _20180407_DataSet
 
             return dt;
         }
+        /// <summary>
+        /// チェックボックス１をオンオフした場合、２も連動する
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void chk1_CheckedChanged1(object sender, EventArgs e)
+        {
+            if (chk1.Checked == true)
+            {
+                chk2.Checked = true;
+            }
+            else
+            {
+                chk2.Checked = false;
+            }
+        }
+
         //public DataTable UseDataAdapter()
         //{
         //    string connection = "Database=test;Data Source=localhost;User Id=root;Password=animedea";
@@ -126,7 +148,7 @@ namespace _20180407_DataSet
 
         //        Console.WriteLine("Executed " + count + " statement(s).");
         //        Console.WriteLine("Delimiter: " + script.Delimiter);
-                
+
         //    }
         //    catch (Exception ex)
         //    {

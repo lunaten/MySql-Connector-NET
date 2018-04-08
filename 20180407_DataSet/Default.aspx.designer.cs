@@ -22,12 +22,21 @@ namespace _20180407_DataSet {
         protected global::System.Web.UI.WebControls.Label lbl1;
         
         /// <summary>
-        /// lbl2 コントロール。
+        /// chk1 コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
+        protected global::System.Web.UI.WebControls.CheckBox chk1;
+        
+        /// <summary>
+        /// chk2 コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk2;
     }
 }
